@@ -1,20 +1,20 @@
-// Calcular o IMC e exibir o resultado
+// Calcula o IMC e exibir o resultado
 function calcularIMC() {
     // Obter valores de peso e altura dos campos de entrada
     var nome = document.getElementById("name").value;
     var peso = parseFloat(document.getElementById("weight").value);
     var altura = parseFloat(document.getElementById("height").value);
 
-    // Verificar se todos os campos foram preenchidos
+    // Verifica se todos os campos foram preenchidos
     if (nome === "" || peso === "" || altura === "") {
         alert("Por favor, preencha todos os campos.");
         return;
     }
 
-    // Calcular o IMC
+    // Calcula o IMC
     var imc = peso / (altura * altura);
 
-    // Exibir o resultado
+    // Exibe o resultado
     var resultado = document.getElementById("resultado");
     resultado.innerHTML = nome + ", seu IMC é: " + imc.toFixed(2);
 
